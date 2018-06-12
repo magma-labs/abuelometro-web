@@ -1,0 +1,39 @@
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-section {
+  background: linear-gradient(360deg, $color-primary-background 20%, rgba($color-primary-background, 0.5) 50%, transparent), asset-url("hero_mobile.jpg") no-repeat center;
+  background-size: cover;
+  height: 400px;
+
+
+  @include media-breakpoint-up(md) {
+    background: linear-gradient(360deg, $color-primary-background 20%, rgba($color-primary-background, 0.5) 50%, transparent), asset-url("senior_citizens_hero.jpg") no-repeat center;
+    height: 500px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background: linear-gradient(90deg, $color-primary-background 35%, rgba($color-primary-background, 0.5) 50%, transparent), asset-url("senior_citizens_hero.jpg") no-repeat center;
+    height: 500px;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .display-4 {
+    font-size: 40px;
+  }
+
+  .know-more-btn {
+    background-color: $color-primary-button;
+    color: $color-text-accent;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 200px;
+    }
+  }
+}
