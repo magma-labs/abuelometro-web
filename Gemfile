@@ -43,6 +43,7 @@ gem 'devise'
 gem 'font-awesome-rails'
 gem 'haml'
 gem 'jquery-rails'
+gem 'grape' 
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
