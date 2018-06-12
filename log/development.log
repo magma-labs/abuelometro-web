@@ -58,5 +58,3 @@ Processing by ProfilesController#index as HTML
   ↳ app/views/profiles/index.html.erb:17
   Rendered profiles/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.2ms)
-
-
