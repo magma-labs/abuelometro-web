@@ -1,5 +1,5 @@
 %nav.navbar.navbar-expand-lg.fixed-top
-  %a.navbar-brand{ href: '/' }
+  = link_to '/', class: 'navbar-brand' do
     = image_tag('abuelometro_logo.png', alt: 'Abuelometro logo', class: 'navbar-logo')
     Abuelometro
   %button.navbar-toggler{ type: 'button', data: { toggle: 'collapse', target: '#navbarToggler'}, aria: { controls: 'navbarToggler', expanded: 'false', label: 'Toggle navigation'} }
@@ -7,7 +7,6 @@
   #navbarToggler.collapse.navbar-collapse
     %ul.navbar-nav
       %li.nav-item
-        %a.nav-link{ href: '/admin' } Iniciar sesión
+        = link_to 'Iniciar sesión', '/admin', class: 'nav-link'
       %li.nav-item
-        %a.nav-link{ href: '/about-us' }
-          Acerca de nosotros
+        = link_to 'Acerca de nosotros', '/about-us', class: 'nav-link'
