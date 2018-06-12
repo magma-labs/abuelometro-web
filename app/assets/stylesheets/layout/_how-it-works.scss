@@ -1,0 +1,13 @@
+.how-it-works__inf {
+  text-align: center;
+}
+@include media-breakpoint-up(md) {
+  .how-it-works__category {
+    display: flex;
+  }
+}
+
+.how-it-works__image {
+  @include make-col(6);
+  padding: 30px 0;
+}
