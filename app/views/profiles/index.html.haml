@@ -1,0 +1,22 @@
+%p#notice= notice
+%h1 Profiles
+%table
+  %thead
+    %tr
+      %th Profile name
+      %th Profile first name
+      %th Profile second name
+      %th Profile phone
+      %th{:colspan => "3"}
+  %tbody
+    - @profiles.each do |profile|
+      %tr
+        %td= profile.profile_name
+        %td= profile.profile_first_name
+        %td= profile.profile_second_name
+        %td= profile.profile_phone
+        %td= link_to 'Show', profile
+        %td= link_to 'Edit', edit_profile_path(profile)
+        %td= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Profile', new_profile_path
