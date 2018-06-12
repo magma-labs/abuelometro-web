@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Elders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elder name</th>
+      <th>Elder first name</th>
+      <th>Elder last name</th>
+      <th>Elder bloond type</th>
+      <th>Elder birthdate</th>
+      <th>Elder weight</th>
+      <th>Elder height</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @elders.each do |elder| %>
+      <tr>
+        <td><%= elder.elder_name %></td>
+        <td><%= elder.elder_first_name %></td>
+        <td><%= elder.elder_last_name %></td>
+        <td><%= elder.elder_bloond_type %></td>
+        <td><%= elder.elder_birthdate %></td>
+        <td><%= elder.elder_weight %></td>
+        <td><%= elder.elder_height %></td>
+        <td><%= link_to 'Show', elder %></td>
+        <td><%= link_to 'Edit', edit_elder_path(elder) %></td>
+        <td><%= link_to 'Destroy', elder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Elder', new_elder_path %>
