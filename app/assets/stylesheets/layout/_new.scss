@@ -1,14 +1,14 @@
 .log-in__section {
-  padding-top: 150px;
   display: flex;
   justify-content: center;
+  padding-top: 150px;
 }
 
 .new_user {
   padding: 50px 0;
 
   input {
-    border: 1px solid #ccc;
+    border: 1px solid $gray;
   }
 }
 

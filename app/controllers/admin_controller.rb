@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# To blkalbala
+# Admin Controller
 class AdminController < ApplicationController
   def index; end
 end
