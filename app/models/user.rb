@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# To control  the entry of the users
+# To create the model of the Users
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
