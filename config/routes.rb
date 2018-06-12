@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :profiles
-
-  root to: 'home#index'
+  devise_for :users
+  root to: 'user#index'
 
 end
