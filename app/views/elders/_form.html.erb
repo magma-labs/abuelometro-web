@@ -1,0 +1,52 @@
+<%= form_with(model: elder, local: true) do |form| %>
+  <% if elder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(elder.errors.count, "error") %> prohibited this elder from being saved:</h2>
+
+      <ul>
+      <% elder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :elder_name %>
+    <%= form.text_field :elder_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elder_first_name %>
+    <%= form.text_field :elder_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elder_last_name %>
+    <%= form.text_field :elder_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elder_bloond_type %>
+    <%= form.text_field :elder_bloond_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elder_birthdate %>
+    <%= form.date_field :elder_birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elder_weight %>
+    <%= form.text_field :elder_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elder_height %>
+    <%= form.text_field :elder_height %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
