@@ -16,3 +16,4 @@ config/database.yml
 .env
 public
 .DS_Store
+/log
