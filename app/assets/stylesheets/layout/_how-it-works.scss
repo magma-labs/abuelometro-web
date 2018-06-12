@@ -1,16 +1,13 @@
 .how-it-works__inf {
   text-align: center;
 }
-
-.how-it-works__category {
-  @media (min-width: 768px) {
+@include media-breakpoint-up(md) {
+  .how-it-works__category {
     display: flex;
-  };
+  }
 }
 
-.how-it-works__description {
-  img {
-    @include make-col(6);
-    padding: 30px 0;
-  }
+.how-it-works__image {
+  @include make-col(6);
+  padding: 30px 0;
 }
