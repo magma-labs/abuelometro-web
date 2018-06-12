@@ -66,6 +66,7 @@ PreCommit:
     exclude:
       - 'spec/dummy/**/*'
       - 'db/**/*'
+      - 'config/**/*'
     command: ['bundle', 'exec', 'rubocop'] # Invoke within Bundler context
 
   Reek:

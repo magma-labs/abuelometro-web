@@ -1,0 +1,12 @@
+<%= form_for :profile,url: '/profile',html: {class: 'form-horizontal'} do |t|%>
+<span>Name:</span>
+<input type="text" name="profile[profile_name]" value="<%= 'Name' %>">
+<span>First name:</span>
+<input type="text" name="profile[profile_first_name]" value="<%= 'First Name' %>">
+<span>Last name:</span>
+<input type="text" name="profile[profile_second_name]" value="<%= 'Last Name' %>">
+<span>Phone contact:</span>
+<input type="text" name="profile[profile_phone]" value="<%= '(XXX) XXX XX XXX' %>">
+<div class='submit'><%= t.submit%></div>
+</div>
+<% end %>
