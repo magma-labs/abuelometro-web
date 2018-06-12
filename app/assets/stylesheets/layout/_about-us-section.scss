@@ -1,0 +1,20 @@
+.about-us-section {
+  background-color: $color-primary-background;
+
+  @include media-breakpoint-up(lg) {
+    align-items: center;
+    background: linear-gradient(360deg, $color-primary-background 25%, rgba($color-primary-background, 0.5) 50%, transparent), asset-url("grandparents_hero.jpg") no-repeat center;
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .know-how-btn {
+    background-color: $color-primary-button;
+    color: $color-text-accent;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 200px;
+    }
+  }
+}
