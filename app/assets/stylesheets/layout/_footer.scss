@@ -1,0 +1,41 @@
+.footer__content {
+  background-color: $fun_blue;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  color: $white;
+  margin-top: 80px;
+  padding: 45px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer__company-motto {
+  font-size: 24px;
+  font-style: italic;
+  margin: 0;
+}
+
+.footer__company-name {
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer__links {
+  display: flex;
+  font-weight: bold;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 35px 0 23px;
+  @include media-breakpoint-up(sm) {
+    justify-content: center;
+  };
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    @include media-breakpoint-up(sm) {
+      padding: 0 30px;
+    };
+  }
+}
