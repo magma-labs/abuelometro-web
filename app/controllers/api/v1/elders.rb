@@ -16,7 +16,7 @@ module API
         end
         get ":id", root: "elder" do
           Elder.where(id: permitted_params[:id]).first!
-        end
+        end        
       end
     end
   end
