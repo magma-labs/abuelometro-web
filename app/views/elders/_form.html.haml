@@ -1,0 +1,37 @@
+= form_with(model: elder, local: true) do |form|
+  - if elder.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(elder.errors.count, "error")
+        prohibited this elder from being saved:
+      %ul
+        - elder.errors.full_messages.each do |message|
+          %li= message
+  .elders__form-container.container.card
+    .elders__field-container.card-body
+      .elders__title
+        = form.label 'Registro de adulto mayor.'
+      .field
+        = form.label :name, 'Nombre'
+        = form.text_field :name, class:'form-control'
+      .field
+        = form.label :first_name, 'Apellido paterno'
+        = form.text_field :first_name, class:'form-control'
+      .field
+        = form.label :last_name, 'Apellido materno'
+        = form.text_field :last_name, class:'form-control'
+      .field
+        = form.label :blood_type, 'Tipo de sangre'
+        = form.text_field :blood_type, class:'form-control'
+      .field
+        = form.label :birthdate, 'Fecha de nacimiento'
+        = form.date_field :birthdate, class:'form-control'
+      .field
+        = form.label :weight, 'Peso'
+        = form.text_field :weight, class:'form-control'
+      .field
+        = form.label :height, 'Estatura'
+        = form.text_field :height, class:'form-control'
+      .actions.elders__actions
+        = link_to 'Regresar', elders_path, class:'btn btn-primary'
+        = form.submit 'Añadir', class: 'btn btn-primary'

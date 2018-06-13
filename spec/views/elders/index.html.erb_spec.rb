@@ -4,20 +4,20 @@ RSpec.describe "elders/index", type: :view do
   before(:each) do
     assign(:elders, [
       Elder.create!(
-        :elder_name => "Elder Name",
-        :elder_first_name => "Elder First Name",
-        :elder_last_name => "Elder Last Name",
-        :elder_bloond_type => "Elder Bloond Type",
-        :elder_weight => "9.99",
-        :elder_height => "9.99"
+        :name => "Elder Name",
+        :first_name => "Elder First Name",
+        :last_name => "Elder Last Name",
+        :blood_type => "Elder Bloond Type",
+        :weight => "9.99",
+        :height => "9.99"
       ),
       Elder.create!(
-        :elder_name => "Elder Name",
-        :elder_first_name => "Elder First Name",
-        :elder_last_name => "Elder Last Name",
-        :elder_bloond_type => "Elder Bloond Type",
-        :elder_weight => "9.99",
-        :elder_height => "9.99"
+        :name => "Elder Name",
+        :first_name => "Elder First Name",
+        :last_name => "Elder Last Name",
+        :blood_type => "Elder Bloond Type",
+        :weight => "9.99",
+        :height => "9.99"
       )
     ])
   end

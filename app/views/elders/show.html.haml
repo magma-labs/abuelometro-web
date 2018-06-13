@@ -1,0 +1,28 @@
+.container.card.elder__show-notice
+  .card-body
+    %p#notice
+      = notice
+    %p
+      %strong Nombre:
+      = @elder.name
+    %p
+      %strong Apellido paterno:
+      = @elder.first_name
+    %p
+      %strong Apellido materno:
+      = @elder.last_name
+    %p
+      %strong Tipo de sangre:
+      = @elder.blood_type
+    %p
+      %strong Fecha de nacimiento:
+      = @elder.birthdate
+    %p
+      %strong Peso:
+      = @elder.weight
+    %p
+      %strong Altura:
+      = @elder.height
+.elders__actions
+  = link_to 'Regresar', elders_path, class:'btn btn-primary'
+  = link_to 'Editar', edit_elder_path(@elder), class:'btn btn-primary'

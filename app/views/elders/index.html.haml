@@ -1,0 +1,29 @@
+.container.card.elder__index
+  .card-body
+    %p#notice= notice
+    %h1.elder__index-title Adultos mayores
+    %table.table.table-bordered
+      %thead
+        %tr
+          %th Nombre
+          %th Primer apellido
+          %th Segundo apellido
+          %th Tipo de sangre
+          %th Fecha de nacimiento
+          %th Peso
+          %th Altura
+          %th{colspan: "3"}
+      %tbody
+        - @elders.each do |elder|
+          %tr
+            %td= elder.name
+            %td= elder.first_name
+            %td= elder.last_name
+            %td= elder.blood_type
+            %td= elder.birthdate
+            %td= elder.weight
+            %td= elder.height
+            %td= link_to 'Mostrar', elder
+            %td= link_to 'Editar', edit_elder_path(elder)
+            %td= link_to 'Eliminar', elder, method: :delete, data: { confirm: 'Are you sure?' }
+    = link_to 'Añadir un adulto mayor', new_elder_path, class:'btn btn-primary'

@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(version: 2018_06_12_214710) do
 
   create_table "elders", force: :cascade do |t|
-    t.string "elder_name"
-    t.string "elder_first_name"
-    t.string "elder_last_name"
-    t.string "elder_bloond_type"
-    t.date "elder_birthdate"
-    t.decimal "elder_weight"
-    t.decimal "elder_height"
+    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "blood_type"
+    t.date "birthdate"
+    t.decimal "weight"
+    t.decimal "height"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 2018_06_12_214710) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_name"
-    t.string "user_first_name"
-    t.string "user_last_name"
-    t.string "user_phone"
+    t.string "name"
+    t.string "first_name"
+    t.string "second_name"
+    t.string "phone"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

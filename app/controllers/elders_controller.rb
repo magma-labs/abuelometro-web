@@ -29,7 +29,7 @@ class EldersController < ApplicationController
 
     respond_to do |format|
       if @elder.save
-        format.html { redirect_to @elder, notice: 'Elder was successfully created.' }
+        format.html { redirect_to @elder, notice: 'Se añadió correctamente la información.' }
         format.json { render :show, status: :created, location: @elder }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class EldersController < ApplicationController
   def update
     respond_to do |format|
       if @elder.update(elder_params)
-        format.html { redirect_to @elder, notice: 'Elder was successfully updated.' }
+        format.html { redirect_to @elder, notice: 'Se editó correctamente la información.' }
         format.json { render :show, status: :ok, location: @elder }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class EldersController < ApplicationController
   def destroy
     @elder.destroy
     respond_to do |format|
-      format.html { redirect_to elders_url, notice: 'Elder was successfully destroyed.' }
+      format.html { redirect_to elders_url, notice: 'Se eliminó correctamente la información.' }
       format.json { head :no_content }
     end
   end
@@ -70,6 +70,6 @@ class EldersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elder_params
-      params.require(:elder).permit(:elder_name, :elder_first_name, :elder_last_name, :elder_bloond_type, :elder_birthdate, :elder_weight, :elder_height)
+      params.require(:elder).permit(:name, :first_name, :last_name, :blood_type, :birthdate, :weight, :height)
     end
 end
