@@ -1,0 +1,34 @@
+<br/>
+<div class="homepage-admin">
+  <div class="care-taker">
+    <a href="#">
+      <%= image_tag('takecare',class: 'ico') %>
+    </a>
+    <p class="subtitle">Cuidadores</p>
+    <% @elders.each do |a| %>
+      <p><%=a.name %></p>
+    <% end %>
+  </div>
+
+  <div class="elders">
+    <a href="/elders">
+      <i class="fa fa-user fa-2x"></i>
+    </a>
+    <p class="subtitle">Adulto M</p>
+
+    <% @elders.each do |a| %>
+      <span><%=a.name %></span>
+      <span><%=a.first_name%></span><br>
+    <% end %>
+  </div>
+  <div class="diseases">
+    <a href="#">
+      <%= image_tag('pils',class: 'ico') %>
+    </a>
+
+    <p class="subtitle">Padecimientos</p>
+    <% 10.times do %>
+      <p>Borro casette</p>
+      <% end %>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  mount API::Base, at: '/'
   resources :elders
   devise_for :users
   root to: 'home#index'
