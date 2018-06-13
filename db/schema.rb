@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_13_000328) do
+ActiveRecord::Schema.define(version: 2018_06_13_005629) do
+
+  create_table "diseases", force: :cascade do |t|
+    t.string "disease_name"
+    t.float "disease_level"
+    t.string "disease_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "users_id"
+    t.integer "elders_id"
+    t.index ["elders_id"], name: "index_diseases_on_elders_id"
+    t.index ["users_id"], name: "index_diseases_on_users_id"
+  end
 
   create_table "elders", force: :cascade do |t|
     t.string "elder_name"
