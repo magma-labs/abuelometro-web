@@ -2,6 +2,7 @@
 Rails.application.routes.draw do
   resources :elders
   devise_for :users
+  mount API::Base, at: '/'
   root to: 'home#index'
   devise_scope :user do
    get "/admin" => "user#index"

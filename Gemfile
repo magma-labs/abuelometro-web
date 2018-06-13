@@ -43,7 +43,9 @@ gem 'devise'
 gem 'font-awesome-rails'
 gem 'haml'
 gem 'jquery-rails'
-gem 'grape' 
+gem 'grape'
+gem 'grape-active_model_serializers'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
