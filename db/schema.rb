@@ -10,8 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_154152) do
-  
+ActiveRecord::Schema.define(version: 2018_06_13_005629) do
+
+  create_table "diseases", force: :cascade do |t|
+    t.string "name"
+    t.float "level"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "users_id"
+    t.integer "elders_id"
+    t.index ["elders_id"], name: "index_diseases_on_elders_id"
+    t.index ["users_id"], name: "index_diseases_on_users_id"
+  end
+
+  create_table "elders", force: :cascade do |t|
+    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "blood_type"
+    t.date "birthdate"
+    t.decimal "weight"
+    t.decimal "height"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relatives", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "elder_id"
+    t.index ["elder_id"], name: "index_relatives_on_elder_id"
+    t.index ["user_id"], name: "index_relatives_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -25,6 +58,11 @@ ActiveRecord::Schema.define(version: 2018_06_12_154152) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "first_name"
+    t.string "second_name"
+    t.string "phone"
+    t.integer "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
