@@ -1,0 +1,47 @@
+.homepage-admin {
+  margin-top: 70px;
+  text-align: center;
+  @include media-breakpoint-up(sm){
+    display: flex;
+  }
+
+  .subtitle {
+    font-size: 25px;
+  }
+
+  .ico {
+    width: 27px;
+  }
+}
+
+.care-taker {
+  @include make-col(12);
+  border: 1px solid;
+  @include media-breakpoint-up(sm) {
+    @include make-col(4);
+  };
+}
+
+.elders {
+  @include make-col(12);
+  border: 1px solid;
+  @include media-breakpoint-up(sm) {
+    @include make-col(4);
+  };
+}
+
+.diseases {
+  @include make-col(12);
+  border: 1px solid;
+  @include media-breakpoint-up(sm) {
+    @include make-col(4);
+  };
+
+}
+
+
+.sign-out-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
