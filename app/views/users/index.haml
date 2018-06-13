@@ -1,0 +1,21 @@
+%br/
+.homepage-admin
+  .care-taker
+    %a{:href => "#"}
+      = image_tag('takecare',class: 'ico')
+    %p.subtitle Cuidadores
+    - @elders.each do |a|
+      %p= a.name
+  .elders
+    %a{:href => "/elders"}
+      %i.fa.fa-user.fa-2x
+    %p.subtitle Adulto M
+    - @elders.each do |a|
+      %span= a.name
+      %span= a.first_name
+      %br/
+  .diseases
+    %a{:href => "#"}
+      = image_tag('pils',class: 'ico')
+    %p.subtitle Padecimientos
+    %p Diabetes

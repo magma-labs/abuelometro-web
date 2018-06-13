@@ -8,8 +8,8 @@
     %ul.navbar-nav
       %li.nav-item
         - if user_signed_in?
-          = link_to "Sign out", users_sign_out_path, :method => :delete, class:'nav-link'
+          = link_to "Cerrar sesión", users_sign_out_path, :method => :delete, class:'nav-link'
         - else
           = link_to 'Iniciar sesión', '/admin', class: 'nav-link'
       %li.nav-item
-        = link_to 'Acerca de nosotros', '/about-us', class: 'nav-link'
+        = link_to 'Acerca de nosotros', '/', class: 'nav-link'
