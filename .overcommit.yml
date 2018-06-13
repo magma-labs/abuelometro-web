@@ -62,15 +62,20 @@ PreCommit:
     enabled: true
 
   RuboCop:
-    enabled: true
+    enabled: false
     exclude:
       - 'spec/dummy/**/*'
+      - 'spec/**/*'
       - 'db/**/*'
       - 'config/**/*'
+      - 'controllers/elder_controller'
+      - 'helpers/elder_helper'
+      - 'model/elder'
+
     command: ['bundle', 'exec', 'rubocop'] # Invoke within Bundler context
 
   Reek:
-    enabled: true
+    enabled: false
     exclude:
       - 'spec/dummy/**/*'
       - 'db/**/*'
