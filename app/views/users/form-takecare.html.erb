@@ -1,0 +1,18 @@
+<div class="form-container">
+  <%= form_for :user,url: '/users',html: {class: 'form-horizontal'} do |t|%>
+  <p>Email:</p>
+  <input type="text" name="t[email]" value="<%= 'example@example.com' %>">
+  <p>Password:</p>
+  <input type="text" name="t[encrypted_password]">
+  <p>Name:</p>
+  <input type="text" name="t[name]">
+  <p>First name:</p>
+  <input type="text" name="t[first_name]">
+  <p>Second name:</p>
+  <input type="text" name="t[second_name]">
+  <p>Phone number:</p>
+  <input type="text" name="t[phone]">
+  <input type="hidden" name="t[role]" value="<%= 2 %>">
+  <div class='submit'><%= link_to('Save', admin_path)%></div>
+  <% end %>'
+</div>
